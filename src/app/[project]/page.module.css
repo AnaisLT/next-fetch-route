@@ -1,0 +1,12 @@
+.cardContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1.5rem;
+  max-width: 100%;
+  padding: 2rem;
+}
+
+.backButton {
+  margin: 1rem 2rem;
+}
