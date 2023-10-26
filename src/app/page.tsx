@@ -1,7 +1,9 @@
-import Link from "next/link";
-import PageHero from "@/components/PageHero";
+import PageHero from "@/components/PageHero/PageHero";
+import * as Card from "@/components/Card/Card";
 import { getProjectList } from "../utils/get-project-list";
 import styles from "./page.module.css";
+
+const { projectCard, main, description, cardContainer } = styles;
 
 export default async function Home() {
   const data: string = await getProjectList();
@@ -9,14 +11,16 @@ export default async function Home() {
 
   return (
     <div>
-      <PageHero className={styles.pageHero} title="Project List" />
-      <main className={styles.main}>
-        <div className={styles.description}>
-          <ul>
+      <PageHero title="Project List" />
+      <main className={main}>
+        <div className={description}>
+          <ul className={cardContainer}>
             {projectList?.map((project) => (
-              <Link href={`/${project}`} key={project}>
-                {project}
-              </Link>
+              <Card.Root className={projectCard} key={project}>
+                <Card.Title href={`/${project}`}>
+                  {project}
+                </Card.Title>
+              </Card.Root>
             ))}
           </ul>
         </div>

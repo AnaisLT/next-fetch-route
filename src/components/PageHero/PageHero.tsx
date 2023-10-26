@@ -1,16 +1,15 @@
 import React from "react";
 import Image from "next/image";
-import * as banner from "../assets/Banner-test.png";
+import * as banner from "../../assets/Banner-test.png";
 import styles from "./PageHero.module.css";
 
 type PageHeroProps = {
-  className: string;
   title?: string;
 };
 
 const { pageHero, pageHeroTitle, pageHeroContent, pageHeroImage } = styles;
 
-const PageHero = ({ className, title }: PageHeroProps) => {
+const PageHero = ({ title }: PageHeroProps) => {
   return (
     <div className={pageHero}>
       <div className={pageHeroContent}>

@@ -1,5 +1,5 @@
 import Link from "next/link";
-import PageHero from "../../components/PageHero"
+import PageHero from "../../components/PageHero/PageHero"
 import { getProjectData } from "../../utils/get-project-data";
 import { Project, Feed } from "../types/project-types";
 

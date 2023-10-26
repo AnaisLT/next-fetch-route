@@ -1,0 +1,16 @@
+.root {
+  position: relative;
+  border: 2px solid gray;
+}
+
+.title {
+  line-height: 1.25;
+}
+
+.link {
+  text-decoration: none;
+}
+
+.content {
+  font-size: 1rem;
+}
