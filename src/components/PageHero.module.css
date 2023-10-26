@@ -1,0 +1,16 @@
+.pageHero {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 50vh;
+}
+
+.pageHeroContent {
+  z-index: 1;
+}
+
+.pageHeroTitle {
+  color: white;
+}
