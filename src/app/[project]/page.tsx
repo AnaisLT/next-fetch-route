@@ -8,9 +8,13 @@ import styles from "./page.module.css";
 
 //TO-DO: create function to make timestamp to be user-friendly
 
+type PageProps = {
+  params: { project: string }
+}
+
 const { cardContainer, backButton, previousPage } = styles;
 
-export default async function Project({ params: { project } }) {
+export default async function Project({ params: { project } }: PageProps) {
   const projectDetails: Project = await getProjectData(project);
   const maxEntries = 10;
 

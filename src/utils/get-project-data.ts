@@ -9,3 +9,6 @@ export async function getProjectData(projectName: string) {
 
   return data;
 }
+
+// Could it be worth using a revalidate tag or time-based revalidation here? e.g. { next: { revalidate: 3600 } }
+// How frequently does the data change? 
