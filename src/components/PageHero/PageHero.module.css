@@ -7,6 +7,11 @@
   height: 50vh;
 }
 
+.pageHeroImage {
+  object-fit: cover;
+  background-position: center;
+}
+
 .pageHeroContent {
   z-index: 1;
 }

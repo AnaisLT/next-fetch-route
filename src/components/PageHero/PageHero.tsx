@@ -21,8 +21,6 @@ const PageHero = ({ title, subtitle }: PageHeroProps) => {
         className={pageHeroImage}
         src={banner}
         layout="fill"
-        objectFit="cover"
-        objectPosition="center"
         alt="Page hero"
       />
     </div>
