@@ -8,7 +8,7 @@ import styles from "./page.module.css";
 
 //TO-DO: create function to make timestamp to be user-friendly
 
-const { cardContainer, backButton } = styles;
+const { cardContainer, backButton, previousPage } = styles;
 
 export default async function Project({ params: { project } }) {
   const projectDetails: Project = await getProjectData(project);
@@ -34,7 +34,7 @@ export default async function Project({ params: { project } }) {
           ))}
       </ul>
       <Button className={backButton}>
-        <Link href="/">Back to project list</Link>
+        <Link className={previousPage} href="/">Back to project list</Link>
       </Button>
     </div>
   );

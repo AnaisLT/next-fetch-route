@@ -17,9 +17,9 @@ export default async function Home() {
           <ul className={cardContainer}>
             {projectList?.map((project) => (
               <Card.Root className={projectCard} key={project}>
-                <Card.Title href={`/${project}`}>
-                  {project}
-                </Card.Title>
+                <Card.Content>
+                  <Card.Title href={`/${project}`}>{project}</Card.Title>
+                </Card.Content>
               </Card.Root>
             ))}
           </ul>
