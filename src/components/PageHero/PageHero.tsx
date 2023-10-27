@@ -1,6 +1,6 @@
 import React from "react";
 import Image from "next/image";
-import * as banner from "../../assets/Banner-test.png";
+import banner from "../../assets/Banner-test.png";
 import styles from "./PageHero.module.css";
 
 type PageHeroProps = {

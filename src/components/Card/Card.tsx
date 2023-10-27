@@ -1,24 +1,24 @@
-import React, {
-  useId,
-} from "react";
+import React, { useId } from "react";
+
 import Link from "next/link";
 
 import styles from "./Card.module.css";
 
-const { root, link, title, content } = styles
- 
+const { root, link, title, content } = styles;
+
 export type CardRootProps = JSX.IntrinsicElements["article"];
 
 export const Root = React.forwardRef<HTMLElement, CardRootProps>(
-  ({ className = "", children, ...props }) => {
+  ({ className = "", children, ...props }, ref) => {
     const labelId = `card-title${useId()}`;
     return (
       <article
         className={`${root} ${className}`}
         aria-labelledby={labelId}
         {...props}
+        ref={ref}
       >
-       {children}
+        {children}
       </article>
     );
   }
@@ -36,10 +36,13 @@ export const Title = ({
   href,
   ...props
 }: CardTitleProps) => {
-  const content = href ? 
+  const content = href ? (
     <Link href={href} className={link}>
       {children}
-    </Link> : children
+    </Link>
+  ) : (
+    children
+  );
   return (
     <h3 className={`${title} ${className}`} {...props}>
       {content}
