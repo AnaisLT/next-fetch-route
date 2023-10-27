@@ -6,7 +6,7 @@ import { getProjectData } from "../../utils/get-project-data";
 import { Project, Feed } from "../types/project-types";
 import styles from "./page.module.css";
 
-//TO-DO: manipulate timestamp to be user-friendly
+//TO-DO: create function to make timestamp to be user-friendly
 
 const { cardContainer, backButton } = styles;
 
